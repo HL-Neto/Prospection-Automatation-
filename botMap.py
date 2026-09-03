@@ -1,41 +1,45 @@
 import os
+import time
 from dotenv import load_dotenv
 import requests
 
 load_dotenv()
 
-# teste de compartilhamento
+# pra teste de compartilhamento com a sua chave api, fresco
 
+API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
+if not API_KEY:
+    raise RuntimeError("GOOGLE_MAPS_API_KEY não encontrada no .env")
 
 url = "https://places.googleapis.com/v1/places:searchNearby"
 
 headers = {
     "Content-Type": "application/json",
-    "X-Goog-Api-Key": os.getenv("GOOGLE_MAPS_API_KEY"),
-    "X-Goog-FieldMask": "places.displayName,places.websiteUri",
+    "X-Goog-Api-Key": API_KEY,
+    "X-Goog-FieldMask": "places.id,places.displayName,places.websiteUri",
 }
 
 categories = [
-    # Alimentação
+    # Alimentação no geral
     "restaurant",
     "cafe",
     "bakery",
     "bar",
     "meal_takeaway",
     "meal_delivery",
-    # Beleza e estética
+    # Beleza e estetica mais preciso
     "beauty_salon",
     "hair_salon",
     "nail_salon",
     "spa",
-    # Saúde
+    # Area de saude
     "dentist",
     "doctor",
     "physiotherapist",
     "veterinary_care",
     "medical_clinic",
     "pharmacy",
-    # Esporte e fitness
+    # Esportes
     "gym",
     "fitness_center",
     "yoga_studio",
@@ -52,7 +56,7 @@ categories = [
     "car_repair",
     "car_wash",
     "tire_shop",
-    # Comércio
+    # Lojas de comercios
     "clothing_store",
     "shoe_store",
     "jewelry_store",
@@ -71,6 +75,12 @@ categories = [
 ]
 
 empresas = []
+places_vistos = (
+    set()
+)  # para deduplicar por place_id caso haja erros, ja seria uma correção
+
+session = requests.Session()
+session.headers.update(headers)
 
 for category in categories:
 
@@ -85,37 +95,65 @@ for category in categories:
         },
     }
 
-    response = requests.post(url, headers=headers, json=dados)
+    try:
+        response = session.post(url, json=dados, timeout=15)
+    except requests.exceptions.RequestException as erro:
+        print(category, "ERRO DE CONEXAO:", erro)
+        continue
 
     print(category, response.status_code)
+
+    if response.status_code != 200:
+        print(category, "ERRO NA API:", response.text)
+        continue
 
     resultado = response.json()
 
     for place in resultado.get("places", []):
+
+        place_id = place.get("id")
+
+        # evita empresas duplicadas que aparecem em mais de uma categoria, coisa que estava se repetindo demais
+        if place_id in places_vistos:
+            continue
+        places_vistos.add(place_id)
 
         nome = place["displayName"]["text"]
         site = place.get("websiteUri")
 
         empresas.append({"nome": nome, "site": site, "categoria": category})
 
+    time.sleep(
+        0.2
+    )  # fresco tem quye respeitar o rate limit da API, voce estava ultrapassando
 
-url_fake = ["instagram.com", "facebook.com"]
 
-for i in range(len(empresas)):
+sites_falsos = [
+    "instagram.com",
+    "facebook.com",
+    "linktr.ee",
+    "wa.me",
+    "linkedin.com",
+    "wixsite.com",
+]
 
-    nome = empresas[i]["nome"]
-    site = empresas[i]["site"]
-    categoria = empresas[i]["categoria"]
+with open("SEM SITE.txt", "w", encoding="utf8") as arquivo_sem_site, open(
+    "COM SITE.txt", "w", encoding="utf8"
+) as arquivo_com_site:
 
-    if site is None or any(url in site.lower() for url in url_fake):
+    for empresa in empresas:
 
-        with open("SEM SITE.txt", "a", encoding="utf8") as file:
-            file.write(nome + "\n")
+        nome = empresa["nome"]
+        site = empresa["site"]
+        categoria = empresa["categoria"]
 
-    else:
+        if site is None or any(url in site.lower() for url in sites_falsos):
 
-        with open("COM SITE.txt", "a", encoding="utf8") as file:
-            file.write(
+            arquivo_sem_site.write(nome + "\n")
+
+        else:
+
+            arquivo_com_site.write(
                 "nome: "
                 + nome
                 + " | url: "
