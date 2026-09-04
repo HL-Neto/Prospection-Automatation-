@@ -1,0 +1,30 @@
+Nome: Corais Bar e Restaurante | Endereco: Avenida Cabo Branco, 5100 - cabo branco - João Pessoa | Telefone: +5583 3247-4336
+Nome: Espaço do Sabor Restaurante | Endereco: Avenida Abdias Gomes de Almeida - João Pessoa | Telefone: +55 83 99996 2913
+Nome: Sakē Temakeria Bancários | Endereco: avenida Flamboyant, 405 - Anatólia - João Pessoa | Telefone: +5583996066264
+Nome: Boi Bumbar | Endereco: Avenida Izidro Gomes, 246 | Telefone: +55 83 3247-2847
+Nome: Marbeli | Endereco: Avenida Marcionila da Conceição, 1545 | Telefone: +55 83 35664942
+Nome: Clau Hamburgueria Artesanal | Endereco: Avenida Fernando Luís Henrique dos Santos, 909 | Telefone: +55 83 9 8670-8032
+Nome: Torre di Pizza | Endereco: Avenida Caetano Figueiras, 870 - Torre - João Pessoa | Telefone: +55 83 3566-2315
+Nome: Panela's Di Barro Restaurante | Endereco: Avenida Presidente Nilo Peçanha, 159 - Bessa - João Pessoa | Telefone: +5583988571133
+Nome: Jun Sakamoto | Endereco: Avenida Governador Flávio Ribeiro Coutinho, 805 - Manaíra - João Pessoa | Telefone: +55 83 3142 0963
+Nome: Bella Pizza | Endereco: Rua Agostinho Fonseca Neto - Água Fria - João Pessoa | Telefone: +55 83 3231-1552
+Nome: Restaurante Dona Branca | Endereco: Avenida Governador Argemiro de Figueiredo, 11223 - Jardim Oceania - João Pessoa | Telefone: +558332456458
+Nome: The Cheeseburguer Factory Cabedelo | Endereco: Avenida Oceano Atlântico, 1592 - Ponta de Campina - Cabedelo | Telefone: +5583993113153
+Nome: Sakē Temakeria Altiplano | Endereco: Rua Maria das Dores Souza, 81 - Altiplano - João Pessoa | Telefone: +558335080681
+Nome: Sakē Temakeria Ponta de Campina, Cabedelo | Endereco: Avenida Oceano Atlântico, 1592 - Ponta de Campina - Cabedelo | Telefone: +5583981608378
+Nome: The Cheeseburguer Factory Altiplano | Endereco: Rua Maria das Dores Souza, 81 - Altiplano - João Pessoa | Telefone: +55 83 99393 6006
+Nome: O Candeeiro | Endereco: Rua Governador José Gomes da Silva | Telefone: +55 83 99927 8701
+Nome: Chico burger | Endereco: Rua Francisco Barbosa Sobrinho | Telefone: +55 83 98892 1936
+Nome: Sal e Brasa PRIME | Endereco: Avenida Cabo Branco, 1854 - Cabo Branco - João Pessoa | Telefone: +558330238770
+Nome: Farmácia do Arnaldo | Endereco: Avenida Marcionila da Conceição - João Pessoa | Telefone: +55 83 3576-2556
+Nome: Bessa Grill | Endereco: Avenida Artur Monteiro Paiva - João Pessoa | Telefone: +55 83 3245-3502
+Nome: Restaurante Salutte Self Service | Endereco: Avenida Geraldo Costa, 156 - João Pessoa | Telefone: +55 83 3247-4080
+Nome: Restaurante e Pizzaria Aida | Endereco: Avenida Cabo Branco, 4270 - João Pessoa | Telefone: +55 83 3247-3482
+Nome: JR Pizzaria | Endereco: Rua Randal Cavalcante Pimentel - Bessa - João Pessoa | Telefone: +55 83 9 8634-5584
+Nome: Sakē Temakeria Manaíra | Endereco: Avenida General Edson Ramalho, 294 - Manaíra - Joao Pessoa | Telefone: +5583991175276
+Nome: Quiosque A Barca | Endereco: Avenida Cabo Branco, 2650 - João Pessoa | Telefone: +55 83 99341 7171
+Nome: The Cheeseburguer Factory Bancários | Endereco: Rua Bancário Waldemar de Mesquita Accioly, 1323 - Bancários - João Pessoa | Telefone: +55839991497883
+Nome: A3 Academia | Endereco: Rua Inspetora Emília Mendonça Gomes | Telefone: +55 83 3237-3007
+Nome: Diamantes Jampa - Loja Virtual de Lingerie | Endereco: Rua Olívio de Moraes Magalhães, 257 - Cuiá - João Pessoa | Telefone: +558399879-3333
+Nome: Equilibbrium | Endereco: Rua Deputado Geraldo Mariz, 1073 - João Pessoa | Telefone: +55 83 35761878
+Nome: Glamour Noivas | Endereco: Avenida Silvino Lopes - Tambaú - João Pessoa | Telefone: +55 83 3247-2669
